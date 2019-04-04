@@ -9,7 +9,16 @@ $(document).ready(function(){
 	 	});
  	}
 
+ 	orderButton = function(){
+ 		$(".purchase").click(function(){
+ 			$(".button-form").submit()
+ 		});
+
+ 	}
 
 
  	openProject();
+
+ 	orderButton();
+
 });

@@ -1,0 +1,122 @@
+@import url(https://s3.amazonaws.com/snooper/UniversLTStd-Ex.otf);
+@import url(https://s3.amazonaws.com/snooper/UniversLTStd-Cn.woff);
+body {
+  display: block;
+  position: fixed;
+  margin: 0;
+  font-family: "Univers LT std", sans-serif;
+  background-color: #e7e7de;
+  /* #4558a3*/
+  width: 100%;
+  height: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.left-panel, .right-panel {
+  display: none;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.right-panel {
+  overflow-y: scroll;
+}
+
+.right-panel li {
+  font-size: 2.5vw;
+  margin-left: 1%;
+}
+
+.about {
+  margin-top: 1%;
+}
+
+.about li, .purchase li {
+  margin-bottom: 5%;
+}
+
+.purchase {
+  display: flex;
+}
+
+.contact li {
+  margin-bottom: 1%;
+}
+
+.contact a {
+  color: black;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  color: black;
+  font-weight: 600;
+}
+
+b {
+  font-family: "baskerville", serif;
+}
+
+.button {
+  width: 3%;
+  margin: 0;
+  z-index: 10;
+}
+
+.purchase:hover {
+  cursor: pointer;
+  font-weight: 600;
+}
+.purchase:hover .button {
+  -webkit-animation: rotation 2s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+.landing-image {
+  cursor: pointer;
+  display: block;
+  position: fixed;
+  width: 300px;
+  height: 125px;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -66.5px;
+  z-index: 10;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    position: relative;
+  }
+
+  .left-panel, .right-panel {
+    width: 100%;
+  }
+
+  .right-panel li {
+    font-size: 8vw;
+  }
+
+  .button {
+    width: 7%;
+  }
+}
+
+/*# sourceMappingURL=snooper.css.map */
