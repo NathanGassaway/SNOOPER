@@ -6,7 +6,7 @@ body {
   position: fixed;
   margin: 0;
   font-family: 'Univers LT std', sans-serif;
-  background-color: #e7e7de; /* #4558a3*/
+  background-color: #d8d9d7; /* #4558a3*/
   width: 100%;
   height: 100%;
 }
@@ -17,6 +17,7 @@ li{
 
 img{
   width: 100%;
+  display: flex;
 }
 
 .left-panel, .right-panel{
@@ -32,7 +33,7 @@ img{
   overflow-y: scroll;
 }
 .right-panel li{
-  font-size: 2.5vw;
+  font-size: 2.7vw;
   margin-left: 1%;
 }
 .about{
@@ -47,6 +48,7 @@ img{
 }
 
 .purchase, .contact{
+  font-style: italic;
 }
 .contact li{
   margin-bottom: 1%;
@@ -63,7 +65,8 @@ img{
 }
 
 b{
-  font-family: "baskerville", serif;
+  font-family: 'garamound', serif;
+  font-style: italic;
 }
 
 .button{
@@ -110,6 +113,11 @@ body{
 
 .left-panel, .right-panel{
   width: 100%;
+  overflow: auto;
+}
+
+.gif-2{
+  display: none;
 }
 
 .right-panel li{
