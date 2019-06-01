@@ -16,9 +16,17 @@ $(document).ready(function(){
 
  	}
 
+ 	subscribeButton = function(){
+ 		$(".subscribe").click(function(){
+ 			$(".validate").submit()
+ 		});
+ 	}
+
 
  	openProject();
 
  	orderButton();
+
+ 	subscribeButton();
 
 });

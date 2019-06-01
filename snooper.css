@@ -41,7 +41,7 @@ img {
   margin-top: 1%;
 }
 
-.about li, .purchase li {
+.about li, .subscribe li, .purchase li {
   margin-bottom: 5%;
 }
 
@@ -49,8 +49,12 @@ img {
   display: flex;
 }
 
-.purchase, .contact {
+.purchase, .subscribe, .contact {
   font-style: italic;
+}
+
+.subscribe li {
+  width: 25%;
 }
 
 .contact li {
@@ -65,6 +69,16 @@ img {
 .contact a:hover {
   color: black;
   font-weight: 600;
+  cursor: pointer;
+}
+
+.subscribe li:hover {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.subscribe-button {
+  display: none;
 }
 
 b {
