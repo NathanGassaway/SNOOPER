@@ -22,6 +22,15 @@ $(document).ready(function(){
  		});
  	}
 
+ 	flashingImage = function(){
+ 		window.setInterval("$('.blinker1').toggle();", 250);
+ 	};
+
+ 	imageTimeout = function(){
+ 		setTimeout(function(){
+ 			flashingImage();
+ 		}, 7500);
+ 	};
 
  	openProject();
 
@@ -29,4 +38,5 @@ $(document).ready(function(){
 
  	subscribeButton();
 
+ 	imageTimeout();
 });

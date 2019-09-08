@@ -37,6 +37,18 @@ img {
   margin-left: 1%;
 }
 
+.blinker1 {
+  position: absolute;
+  display: none;
+  width: 100%;
+  z-index: -5;
+}
+.blinker1 img {
+  display: flex;
+  width: 100%;
+  right: 0;
+}
+
 .about {
   margin-top: 1%;
 }
@@ -77,12 +89,8 @@ img {
   cursor: pointer;
 }
 
-.subscribe-button {
-  display: none;
-}
-
 b {
-  font-family: "garamound", serif;
+  font-family: serif;
   font-style: italic;
 }
 
