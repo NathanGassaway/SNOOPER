@@ -1,0 +1,269 @@
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  margin: 0;
+}
+
+div {
+  margin-bottom: 0;
+}
+
+.panel {
+  height: 100%;
+  overflow: auto;
+  list-style: none;
+  font-family: "Cousine", monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+  z-index: 10;
+  mix-blend-mode: darken;
+}
+
+.panel::-webkit-scrollbar {
+  display: none;
+}
+
+#panel-1 {
+  width: 7%;
+  font-size: 10%;
+  font-weight: 100;
+  letter-spacing: 0px;
+}
+#panel-1 .logo-image {
+  width: 45px;
+}
+
+.subscribe {
+  margin-top: -4%;
+}
+
+.purchase :hover {
+  cursor: pointer;
+  font-weight: 600;
+}
+.purchase .button {
+  width: 15%;
+  z-index: 10;
+  display: none;
+}
+
+.purchase:hover .spinner {
+  -webkit-animation: rotation 2s infinite linear;
+}
+
+.spinner {
+  width: 6%;
+  height: 100%;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+.dk-logo {
+  width: 65%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 900%;
+  -webkit-animation: rotation 10s infinite linear;
+}
+
+.purchase, .subscribe, .contact a {
+  /*font-style: italic;*/
+  color: black;
+  text-decoration: none;
+}
+
+.subscribe li:hover, .contact a:hover {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#panel-2 {
+  width: 43%;
+}
+#panel-2 li {
+  margin-left: 0.5%;
+}
+
+#panel-3 {
+  width: 50%;
+}
+#panel-3 li {
+  margin-left: 0.5%;
+  width: 90%;
+}
+
+.issue-title {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.contributors {
+  margin-top: 5%;
+  color: black;
+  font-style: italic;
+}
+
+@media screen and (max-width: 786px) {
+  #panel-2 {
+    margin-top: 8%;
+  }
+
+  #panel-3 {
+    margin-top: 8%;
+  }
+
+  #panel-1 {
+    position: fixed;
+    display: flex;
+    font-size: 14px;
+    height: 5%;
+    width: 100%;
+    z-index: 15;
+    background-color: #d8d9d7;
+    text-align: center;
+    mix-blend-mode: inherit;
+  }
+  #panel-1 .logo {
+    margin: auto;
+  }
+  #panel-1 .logo .logo-image {
+    width: 55px;
+  }
+  #panel-1 .subscribe {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 27.6%;
+  }
+  #panel-1 .contact {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 27.6%;
+  }
+  #panel-1 .purchase {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 27.6%;
+  }
+  #panel-1 .purchase li {
+    margin-left: auto;
+  }
+  #panel-1 .purchase .spinner {
+    margin-right: auto;
+    width: 4%;
+  }
+  #panel-1 .dk {
+    width: 9%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 0;
+  }
+
+  .dk-logo {
+    width: 50%;
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .issue-title {
+    font-size: 14px;
+  }
+
+  #panel-2 {
+    width: 50%;
+    font-size: 14px;
+  }
+
+  #panel-3 {
+    width: 50%;
+    font-size: 14px;
+  }
+
+  img {
+    width: 120%;
+  }
+}
+@media screen and (max-width: 414px) {
+  #panel-1 {
+    font-size: 10px;
+  }
+  #panel-1 .logo .logo-image {
+    width: 40px;
+  }
+
+  .dk-logo {
+    width: 50%;
+  }
+
+  .issue-title {
+    font-size: 12px;
+  }
+
+  #panel-2 {
+    font-size: 12px;
+    margin-top: 11%;
+  }
+
+  #panel-3 {
+    font-size: 12px;
+    margin-top: 11%;
+  }
+}
+/*start old site */
+.old-site {
+  display: block;
+  position: fixed;
+  margin: 0;
+  font-family: "Univers LT std", sans-serif;
+  background-color: #d8d9d7;
+  z-index: -5;
+  height: 100%;
+  filter: blur(12px);
+}
+
+.old-site img {
+  display: flex;
+}
+
+.left-panel, .right-panel {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.left-panel img {
+  width: 100%;
+}
+
+.right-panel {
+  overflow-y: scroll;
+}
+
+.right-panel li {
+  font-size: 2.7vw;
+  margin-left: 1%;
+}
+
+.about {
+  margin-top: 1%;
+}
+
+.purchase {
+  display: flex;
+}
+
+b {
+  font-family: serif;
+  font-style: italic;
+}
+
+/*# sourceMappingURL=snooper-2.0.css.map */
