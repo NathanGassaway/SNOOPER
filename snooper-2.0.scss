@@ -4,7 +4,6 @@
 @mixin logo{
   -webkit-animation: rotation 10s infinite linear;
 }
-
 body{
 	width: 100%;
 	height: 100%;
@@ -15,6 +14,26 @@ body{
 div{
   margin-bottom: 0;
 }
+.landing{
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  background-color: #d8d9d7;
+  z-index: 20;
+  position: absolute;
+}
+
+.landing-image{
+  cursor: pointer;
+    display: block;
+    position: fixed;
+    width: 300px;
+    height: 125px;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top:  -66.5px;
+  }
 .panel{
 	height: 100%;
 	overflow: auto;
@@ -24,38 +43,43 @@ div{
   letter-spacing: 1px;
   z-index: 10;
   mix-blend-mode:darken;
+  background-blend-mode: darken;
 }
 .panel::-webkit-scrollbar{
 	display: none;
 }
 #panel-1{
   width: 7%;
-  font-size: 10%;
+  font-size: 16px;
   font-weight: 100;
-  letter-spacing: 0px;
+  letter-spacing: 2px;
   .logo-image{
-    width: 45px;
+    width: 70px;
   }
 }
-.subscribe{
-  margin-top: -4%;
+.no-purchase{
+  text-decoration: line-through;
+  width: 150%;
+  :hover{
+    cursor:default;
+  }
 }
 .purchase {
+  width: 150%;
   :hover{
     cursor:pointer;
     font-weight: 600;
   }
+  .purchase:hover {
+  .spinner{
+    @include button;
+  }
+}
   .button {
   width: 15%;
   z-index: 10;
   display: none;
   }
-}
-.purchase:hover {
-  .spinner{
-    @include button;
-  }
-  
 }
 .spinner{
   width: 6%;
@@ -78,11 +102,12 @@ div{
   @include logo;
 }
 .purchase, .subscribe, .contact a{
-  /*font-style: italic;*/
   color: black;
   text-decoration: none;
 }
-
+.subscribe, .contact, .no-purchase{
+  margin-bottom: 10%;
+}
 .subscribe li:hover, .contact a:hover{
   font-weight: 600;
   cursor: pointer;
@@ -110,13 +135,11 @@ div{
   font-style: italic;
 }
 
-@media screen and (max-width: 786px) {
 
-  #panel-2{
+@media screen and (max-width: 786px) {
+  
+  #panel-2, #panel-3{
     margin-top: 8%;
-  }
-  #panel-3{
-    margin-top: 8%; 
   }
   #panel-1{
     position: fixed;
@@ -128,26 +151,32 @@ div{
     background-color: #d8d9d7;
     text-align: center;
     mix-blend-mode:inherit;
+    background-blend-mode:darken; 
+    letter-spacing: 0px;
     .logo{
       margin:auto;
       .logo-image{
         width: 55px;
       }
     }
+
     .subscribe{
       margin-top: auto;
       margin-bottom: auto;
-      width: 27.6%;
+      width: 30.3%;
     }
     .contact{
       margin-top: auto;
       margin-bottom: auto;
-      width: 27.6%;
+      width: 30.3%;
+    }
+    .no-purchase{
+    display: none;
     }
     .purchase{
       margin-top: auto;
       margin-bottom: auto;
-      width: 27.6%;
+      width: 30.3%;
       li{
         margin-left: auto;
       }
@@ -163,7 +192,6 @@ div{
       margin-right: 0;
     }
   }
-
   .dk-logo{
         width: 50%;
     margin-top: 0;
@@ -172,7 +200,6 @@ div{
   .issue-title{
     font-size:14px;
   }
-
   #panel-2{
     width: 50%;
     font-size: 14px;
@@ -181,12 +208,17 @@ div{
     width: 50%;
     font-size: 14px;
   }
-
 img{
   width: 120%;
 }
-
 }
+
+@media screen and (max-width: 768px) {
+
+#panel-2, #panel-3{
+    margin-top: 7%;
+  }
+  }
 
 @media screen and (max-width: 414px) {
 
@@ -214,11 +246,22 @@ img{
   font-size: 12px;
   margin-top: 11%;
 }
-
 }
 
- /*start old site */
+@media screen and (max-width: 411px) {
 
+  #panel-2, #panel-3{
+    margin-top: 10%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+
+  #panel-2, #panel-3{
+    margin-top: 9%;
+  }
+}
+ /*start old site */
 
 .old-site {
   display: block;
@@ -242,20 +285,16 @@ img{
 .left-panel img{
 	width: 100%;
 }
-
 .right-panel {
   overflow-y: scroll;
 }
-
 .right-panel li {
   font-size: 2.7vw;
   margin-left: 1%;
 }
-
 .about {
   margin-top: 1%;
 }
-
 .purchase {
   display: flex;
 }

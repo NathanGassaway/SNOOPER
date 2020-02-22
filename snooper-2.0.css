@@ -10,6 +10,27 @@ div {
   margin-bottom: 0;
 }
 
+.landing {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  background-color: #d8d9d7;
+  z-index: 20;
+  position: absolute;
+}
+
+.landing-image {
+  cursor: pointer;
+  display: block;
+  position: fixed;
+  width: 300px;
+  height: 125px;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -66.5px;
+}
+
 .panel {
   height: 100%;
   overflow: auto;
@@ -19,6 +40,7 @@ div {
   letter-spacing: 1px;
   z-index: 10;
   mix-blend-mode: darken;
+  background-blend-mode: darken;
 }
 
 .panel::-webkit-scrollbar {
@@ -27,30 +49,36 @@ div {
 
 #panel-1 {
   width: 7%;
-  font-size: 10%;
+  font-size: 16px;
   font-weight: 100;
-  letter-spacing: 0px;
+  letter-spacing: 2px;
 }
 #panel-1 .logo-image {
-  width: 45px;
+  width: 70px;
 }
 
-.subscribe {
-  margin-top: -4%;
+.no-purchase {
+  text-decoration: line-through;
+  width: 150%;
+}
+.no-purchase :hover {
+  cursor: default;
 }
 
+.purchase {
+  width: 150%;
+}
 .purchase :hover {
   cursor: pointer;
   font-weight: 600;
+}
+.purchase .purchase:hover .spinner {
+  -webkit-animation: rotation 2s infinite linear;
 }
 .purchase .button {
   width: 15%;
   z-index: 10;
   display: none;
-}
-
-.purchase:hover .spinner {
-  -webkit-animation: rotation 2s infinite linear;
 }
 
 .spinner {
@@ -76,9 +104,12 @@ div {
 }
 
 .purchase, .subscribe, .contact a {
-  /*font-style: italic;*/
   color: black;
   text-decoration: none;
+}
+
+.subscribe, .contact, .no-purchase {
+  margin-bottom: 10%;
 }
 
 .subscribe li:hover, .contact a:hover {
@@ -113,11 +144,7 @@ div {
 }
 
 @media screen and (max-width: 786px) {
-  #panel-2 {
-    margin-top: 8%;
-  }
-
-  #panel-3 {
+  #panel-2, #panel-3 {
     margin-top: 8%;
   }
 
@@ -131,6 +158,8 @@ div {
     background-color: #d8d9d7;
     text-align: center;
     mix-blend-mode: inherit;
+    background-blend-mode: darken;
+    letter-spacing: 0px;
   }
   #panel-1 .logo {
     margin: auto;
@@ -141,17 +170,20 @@ div {
   #panel-1 .subscribe {
     margin-top: auto;
     margin-bottom: auto;
-    width: 27.6%;
+    width: 30.3%;
   }
   #panel-1 .contact {
     margin-top: auto;
     margin-bottom: auto;
-    width: 27.6%;
+    width: 30.3%;
+  }
+  #panel-1 .no-purchase {
+    display: none;
   }
   #panel-1 .purchase {
     margin-top: auto;
     margin-bottom: auto;
-    width: 27.6%;
+    width: 30.3%;
   }
   #panel-1 .purchase li {
     margin-left: auto;
@@ -191,6 +223,11 @@ div {
     width: 120%;
   }
 }
+@media screen and (max-width: 768px) {
+  #panel-2, #panel-3 {
+    margin-top: 7%;
+  }
+}
 @media screen and (max-width: 414px) {
   #panel-1 {
     font-size: 10px;
@@ -215,6 +252,16 @@ div {
   #panel-3 {
     font-size: 12px;
     margin-top: 11%;
+  }
+}
+@media screen and (max-width: 411px) {
+  #panel-2, #panel-3 {
+    margin-top: 10%;
+  }
+}
+@media screen and (max-width: 375px) {
+  #panel-2, #panel-3 {
+    margin-top: 9%;
   }
 }
 /*start old site */
