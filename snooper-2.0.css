@@ -144,13 +144,14 @@ div {
 }
 .site-3-issue-1-images, .site-3-issue-2-images, .site-3-issue-3-images{
   width: 70%;
-  display: inline-flex;
+  display: flex;
 }
 .site-3-issue-1-images img, .site-3-issue-2-images img, .site-3-issue-3-images img{
   margin-right: 2%;
   margin: auto;
   max-width: 100%;
   max-height: 100%;
+  display: flex;
 }
 
 .site-3-issue-2-images img, .site-3-issue-3-images img{
